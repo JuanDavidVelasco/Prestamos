@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-# Use system-installed maven instead of the wrapper
+# Use system-installed maven directly
 RUN mvn clean package -DskipTests
 
 EXPOSE 8081
