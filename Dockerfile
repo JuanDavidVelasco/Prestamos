@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+# Use system-installed maven instead of the wrapper
+RUN mvn clean package -DskipTests
 
- EXPOSE 8081
+EXPOSE 8081
 
 CMD ["sh", "-c", "java -jar target/*.jar"]
