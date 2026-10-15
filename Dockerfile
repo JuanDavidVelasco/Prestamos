@@ -4,8 +4,9 @@ WORKDIR /app
 
 COPY . .
 
-# Use system-installed maven directly
-RUN mvn clean package -DskipTests
+RUN chmod +x ./mvnw
+
+RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8081
 

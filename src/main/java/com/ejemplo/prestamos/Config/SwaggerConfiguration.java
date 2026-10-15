@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SwaggerConfiguration {
-    @Bean
+   /* @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
@@ -20,5 +20,5 @@ public class SwaggerConfiguration {
                                 .email("d-----")));
 
     }
-
+*/
 }
