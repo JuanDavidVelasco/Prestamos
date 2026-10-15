@@ -36,13 +36,12 @@ public class PrestamoController {
         }
     }
 
-    // GET /api/prestamos -> Consultar todos los préstamos
+
     @GetMapping
     public ResponseEntity<List<Prestamo>> consultarPrestamos() {
         return ResponseEntity.ok(prestamoService.consultarPrestamos());
     }
 
-    // GET /api/prestamos/herramienta/{id} -> Consultar préstamos de una herramienta
     @GetMapping("/herramienta/{id}")
     public ResponseEntity<?> consultarPrestamosPorHerramienta(@PathVariable Long id) {
         try {
